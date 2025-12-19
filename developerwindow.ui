@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeveloperWindow</class>
+ <widget class="QDialog" name="DeveloperWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>335</width>
+    <height>242</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Управление разработчиками</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tableDevelopers">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="columnCount">
+      <number>1</number>
+     </property>
+
+     <!-- ВАЖНО: убрано horizontalHeaderStretchLastSection (оно ломает сборку в Qt6) -->
+
+     <column>
+      <property name="text">
+       <string>Имя</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="btnAddDeveloper">
+       <property name="text">
+        <string>Добавить разработчика</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnRemoveDeveloper">
+       <property name="text">
+        <string>Удалить разработчика</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

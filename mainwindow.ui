@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Доска Scrum</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <layout class="QHBoxLayout" name="toolbarLayout">
+      <item>
+       <widget class="QPushButton" name="btnOpenDevelopers">
+        <property name="text">
+         <string>Разработчики</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAddTask">
+        <property name="text">
+         <string>Добавить задачу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDeleteTask">
+        <property name="text">
+         <string>Удалить задачу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="toolbarSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSaveBoard">
+        <property name="text">
+         <string>Сохранить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLoadBoard">
+        <property name="text">
+         <string>Загрузить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="boardLayout">
+      <item>
+       <widget class="QGroupBox" name="groupAssigned">
+        <property name="title">
+         <string>К выполнению</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QListWidget" name="listAssigned"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupInProgress">
+        <property name="title">
+         <string>В работе (включая заблокированные)</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QListWidget" name="listInProgress"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupDone">
+        <property name="title">
+         <string>Готово</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QListWidget" name="listDone"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
